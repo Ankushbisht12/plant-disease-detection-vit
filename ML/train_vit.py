@@ -81,8 +81,6 @@ def train():
 
     print("Training complete. Best Val Accuracy:", best_acc)
     
-    import torch
-    
     torch.save(model.state_dict(), "vit_model.pth")
     print("✅ Model saved as vit_model.pth")
 
