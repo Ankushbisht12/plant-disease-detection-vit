@@ -14,7 +14,7 @@ DATASET_DIR = "../dataset"  # PlantVillage tomato folder
 SAVE_PATH = "saved_model/vit_model.pth"
 BATCH_SIZE = 8
 EPOCHS = 3
-LR = 1e-4
+LR = 3e-4
 
 os.makedirs("saved_model", exist_ok=True)
 
@@ -80,6 +80,14 @@ def train():
             torch.save(model.state_dict(), SAVE_PATH)
 
     print("Training complete. Best Val Accuracy:", best_acc)
+    
+    import torch
+    
+    torch.save(model.state_dict(), "vit_model.pth")
+    print("✅ Model saved as vit_model.pth")
+
+
+
 
 if __name__ == "__main__":
     train()
