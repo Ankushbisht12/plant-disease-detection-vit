@@ -10,3 +10,5 @@ pillow
 numpy
 pandas
 scikit-learn
+python-multipart
+requests
